@@ -1,0 +1,85 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="{% static "css/regevent.css" %}"rel="stylesheet" media="all">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Add An Event!</h2>
+        <form method="post"  enctype="multipart/form-data">
+            {% csrf_token %}
+    
+            <h4>Event Details</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    {% render_field eventForm.name class="name" placeholder="Name" %}
+                    <i class="fa fa-chevron-circle-right icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    {% render_field eventForm.email class="name" placeholder="Email" %}
+                    <i class="fa fa-book icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    {% render_field eventForm.venue class="name" placeholder="Venue" %}
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    {% render_field eventForm.requirements class="name" placeholder="Requirements" %}
+                    <i class="fa fa-align-justify icon"></i>
+                </div>
+            </div>
+ 
+            <div class="input_group">
+                <div class="input_box">
+                    {% render_field eventForm.date class="name" placeholder="Date" %}
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                </div></div>
+                <div class="input_group">
+                <div class="input_box">
+                    <h4>OD Provided</h4>
+                    <input type="radio" name="odyesno" class="radio" id="b1" checked>
+                    <label for="b1">Yes</label>
+                    <input type="radio" name="odyesno" class="radio" id="b2">
+                    <label for="b2">No</label>
+                </div>
+            </div>
+            <div class="input_group">
+            <div class="input_box">
+                {% render_field eventForm.time class="name" placeholder="Time" %}
+                <i class="fa fa-clock-o icon" aria-hidden="true"></i>
+            </div></div>
+            <div class="input_group">
+            <div>
+                {% render_field eventForm.image class="name" placeholder="image" %}
+            </div>
+            </div>
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">Upload</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

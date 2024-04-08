@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <style media="screen">
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+  }
+     .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/loginbg.jpeg" %}');
+      background-size: auto 100%;
+      background-position: center center;
+      background-repeat: repeat;
+    } 
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+</head>
+
+<body>
+  {% include "college/navbar.html" %}
+  <br><br>
+
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  
+    <br><br><br><br><br><br><br><br><br>
+  </div>
+
+  <br><br>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">SRM CONNECT</h2><br>
+  {% comment %} <p class="w3-opacity"><i>connecting people ~ LazyCoder</i></p> {% endcomment %}
+  <p class="w3-justify">
+    "Welcome to the SRM College Event Management Portal! We take pride in bringing together the vibrant and diverse community of SRM College through a myriad of exciting events and activities. Our platform serves as a hub for students, faculty, and enthusiasts alike to explore, participate, and engage in a wide range of events spanning from academic conferences to cultural extravaganzas. With a dedicated team and state-of-the-art technology, we aim to create memorable experiences that foster camaraderie and learning. Join us in celebrating the spirit of SRM College and stay updated with the latest happenings right here!"</section>
+</br></br></br></br>
+<footer>
+  <p>&copy; 2023 SRM Event Connect</p>
+</footer>
+</body>
+
+</html>

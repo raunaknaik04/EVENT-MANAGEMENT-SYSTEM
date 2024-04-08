@@ -1,0 +1,26 @@
+{% extends 'college/student_base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+<body class="hero"><br><br><br><br><br>
+    
+<section id="home" >
+    <h2>Welcome {{request.user.first_name}} to SRM Event Connect</h2> 
+    <p>Your one-stop solution for campus event management</p>
+    <br><br>
+    <p>Our Portal is a dynamic platform that unites the diverse SRM College community through a range of engaging events and activities.<br> From academic conferences to cultural celebrations, our dedicated team and advanced technology aim to create memorable experiences that promote camaraderie and learning. Join us in celebrating the spirit of SRM College and stay connected with the latest happenings!</p>
+
+</section>
+
+</body>
+{% endblock content %}
